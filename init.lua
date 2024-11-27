@@ -615,7 +615,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
+        -- tsserver = {},
         --
 
         lua_ls = {
@@ -929,7 +929,7 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -954,3 +954,21 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+-- Custom extensions
+-- require('nvim-ts-autotag').setup {
+--  opts = {
+-- Defaults
+--    enable_close = true, -- Auto close tags
+--    enable_rename = true, -- Auto rename pairs of tags
+--    enable_close_on_slash = false, -- Auto close on trailing </
+--  },
+-- Also override individual filetype configs, these take priority.
+-- Empty by default, useful if one of the "opts" global settings
+-- doesn't work well in a specific filetype
+--  per_filetype = {
+--    ['html'] = {
+--     enable_close = false,
+--   },
+--  },
+--}
