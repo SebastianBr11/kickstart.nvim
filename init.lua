@@ -622,6 +622,7 @@ require('lazy').setup({
         clangd = {},
         -- gopls = {},
         pyright = {},
+        ruff = {},
         rust_analyzer = {},
         astro = {},
         bashls = {},
