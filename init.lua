@@ -728,6 +728,7 @@ require('lazy').setup({
         'shfmt',
         'prettierd',
         'eslint_d',
+        'markdownlint',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
