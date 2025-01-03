@@ -727,6 +727,7 @@ require('lazy').setup({
         'shellcheck',
         'shfmt',
         'prettierd',
+        'eslint_d',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
