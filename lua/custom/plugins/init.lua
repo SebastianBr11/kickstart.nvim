@@ -3,17 +3,6 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  --  {
-  --  'neovim/nvim-lspconfig',
-  --  config = function()
-  --    require('lspconfig').tsserver.setup {}
-  --  end,
-  -- },
-  {
-    'pmizio/typescript-tools.nvim',
-    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
-    opts = {},
-  },
   {
     'windwp/nvim-ts-autotag',
     config = function()
