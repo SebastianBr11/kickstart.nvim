@@ -681,7 +681,9 @@ require('lazy').setup({
         rust_analyzer = {},
         astro = {},
         bashls = {},
-        denols = {},
+        denols = {
+          root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
+        },
         svelte = {},
         tailwindcss = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
