@@ -795,6 +795,7 @@ require('lazy').setup({
         css = { 'prettierd' },
         json = { 'prettierd' },
         svelte = { 'prettierd' },
+        tex = { 'tex-fmt' },
       },
     },
   },
