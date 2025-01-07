@@ -6,6 +6,11 @@ return {
     init = function()
       -- VimTeX configuration goes here, e.g.
       -- vim.g.vimtex_view_method = 'zathura'
+
+      -- NOTE: See https://github.com/lervag/vimtex/issues/2888 for more info about out_dir configuration
+      vim.g.vimtex_compiler_latexmk = {
+        out_dir = './out/',
+      }
     end,
   },
 }
