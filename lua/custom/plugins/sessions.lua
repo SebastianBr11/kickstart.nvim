@@ -14,6 +14,7 @@ return {
     opts = {
       suppressed_dirs = { '~/', '~/Dev', '~/Downloads', '/' },
       -- log_level = 'debug',
+      auto_restore_last_session = true,
     },
   },
 }
