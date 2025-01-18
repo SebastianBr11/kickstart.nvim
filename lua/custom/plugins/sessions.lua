@@ -8,13 +8,13 @@ return {
       { '<leader>ww', '<cmd>SessionSave<CR>', desc = 'Save / [W]rite session' },
       { '<leader>wa', '<cmd>SessionToggleAutoSave<CR>', desc = 'Toggle autosave' },
     },
-    ---enables autocomplete for opts
-    ---@module "auto-session"
-    ---@type AutoSession.Config
-    opts = {
-      suppressed_dirs = { '~/', '~/Dev', '~/Downloads', '/' },
-      -- log_level = 'debug',
-      auto_restore_last_session = true,
-    },
+    config = function()
+      require('auto-session').setup {
+        suppressed_dirs = { '~/', '~/Dev', '~/Downloads', '/' },
+        -- log_level = 'debug',
+      }
+
+      vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
+    end,
   },
 }
