@@ -631,8 +631,10 @@ require('lazy').setup({
         denols = {
           root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
         },
+        html = {},
         svelte = {},
         tailwindcss = {},
+        angularls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         ts_ls = {},
@@ -735,6 +737,7 @@ require('lazy').setup({
         typescript = { 'prettierd' },
         javascriptreact = { 'prettierd' },
         typescriptreact = { 'prettierd' },
+        html = { 'prettierd' },
         css = { 'prettierd' },
         json = { 'prettierd' },
         svelte = { 'prettierd' },
