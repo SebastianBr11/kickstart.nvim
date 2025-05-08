@@ -769,6 +769,8 @@ require('lazy').setup({
           {
             'rafamadriz/friendly-snippets',
             config = function()
+              require('luasnip').filetype_extend('typescript', { 'angular' })
+              require('luasnip').filetype_extend('html', { 'angular' })
               require('luasnip.loaders.from_vscode').lazy_load()
             end,
           },
