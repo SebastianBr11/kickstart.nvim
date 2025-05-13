@@ -638,6 +638,7 @@ require('lazy').setup({
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         ts_ls = {},
+        marksman = {},
 
         lua_ls = {
           -- cmd = { ... },
