@@ -17,7 +17,7 @@ return {
       'nvim-lua/plenary.nvim',
 
       -- Optional dependencies
-      'saghen/blink-cmp',
+      'saghen/blink.cmp',
       'nvim-telescope/telescope.nvim',
       'nvim-treesitter/nvim-treesitter',
     },
