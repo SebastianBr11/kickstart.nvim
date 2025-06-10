@@ -696,9 +696,9 @@ require('lazy').setup({
         rust_analyzer = {},
         astro = {},
         bashls = {},
-        denols = {
-          root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
-        },
+        -- denols = {
+        --   root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
+        -- },
         html = {},
         svelte = {},
         tailwindcss = {},
