@@ -15,7 +15,6 @@ return {
         htmlangular = { 'eslint_d' },
         svelte = { 'eslint_d' },
         markdown = { 'markdownlint' },
-        rust = { 'clippy' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,

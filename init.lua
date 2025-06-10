@@ -691,7 +691,15 @@ require('lazy').setup({
           },
         },
         ruff = {},
-        rust_analyzer = {},
+        rust_analyzer = {
+          settings = {
+            ['rust-analyzer'] = {
+              check = {
+                command = 'clippy',
+              },
+            },
+          },
+        },
         astro = {},
         bashls = {},
         -- denols = {
