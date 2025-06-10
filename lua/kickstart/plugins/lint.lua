@@ -10,6 +10,8 @@ return {
         typescript = { 'eslint_d' },
         javascriptreact = { 'eslint_d' },
         typescriptreact = { 'eslint_d' },
+        html = { 'eslint_d' },
+        htmlangular = { 'eslint_d' },
         svelte = { 'eslint_d' },
         markdown = { 'markdownlint' },
         rust = { 'clippy' },

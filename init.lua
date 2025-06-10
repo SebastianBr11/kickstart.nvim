@@ -814,6 +814,7 @@ require('lazy').setup({
         javascriptreact = { 'prettierd' },
         typescriptreact = { 'prettierd' },
         html = { 'prettierd' },
+        htmlangular = { 'prettierd' },
         css = { 'prettierd' },
         json = { 'prettierd' },
         svelte = { 'prettierd' },
