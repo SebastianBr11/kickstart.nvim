@@ -805,10 +805,6 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        python = {
-          'ruff_fix', -- To fix lint errors. (ruff with argument --fix)
-          'ruff_format', -- To run the formatter. (ruff with argument format)
-        },
         javascript = { 'prettierd' },
         typescript = { 'prettierd' },
         javascriptreact = { 'prettierd' },
