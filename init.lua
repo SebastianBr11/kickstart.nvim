@@ -818,6 +818,7 @@ require('lazy').setup({
         html = { 'prettierd' },
         htmlangular = { 'prettierd' },
         css = { 'prettierd' },
+        scss = { 'prettierd' },
         json = { 'prettierd' },
         svelte = { 'prettierd' },
         tex = { 'tex-fmt' },
