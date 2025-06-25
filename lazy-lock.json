@@ -42,5 +42,6 @@
   "ts-error-translator.nvim": { "branch": "main", "commit": "47e5ba89f71b9e6c72eaaaaa519dd59bd6897df4" },
   "typescript-tools.nvim": { "branch": "master", "commit": "3c501d7c7f79457932a8750a2a1476a004c5c1a9" },
   "vimtex": { "branch": "master", "commit": "22d9ae5265df069cb68310449a7218b836875c5b" },
+  "typst-preview.nvim": { "branch": "master", "commit": "dea4525d5420b7c32eebda7de15a6beb9d6574fa" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
 }

@@ -714,6 +714,20 @@ require('lazy').setup({
         ts_ls = {},
         marksman = {},
 
+        tinymist = {
+          settings = {
+            formatterMode = 'typstyle',
+            exportPdf = 'onType',
+            semanticTokens = 'enable',
+            formatterProseWrap = true,
+            formatterPrintWidth = 80,
+            lint = {
+              enabled = true,
+              when = 'onType',
+            },
+          },
+        },
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
