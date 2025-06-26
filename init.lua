@@ -711,7 +711,14 @@ require('lazy').setup({
         angularls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
-        vtsls = {},
+        vtsls = {
+          experimental = {
+            completion = {
+              enableServerSideFuzzyMatch = true,
+              entriesLimit = 50,
+            },
+          },
+        },
         marksman = {},
 
         tinymist = {
