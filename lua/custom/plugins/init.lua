@@ -17,4 +17,12 @@ return {
       distance_stop_animating = 0.5, -- 0.1      > 0
     },
   },
+  {
+    'brenoprata10/nvim-highlight-colors',
+    init = function()
+      vim.opt.termguicolors = true
+
+      require('nvim-highlight-colors').setup {}
+    end,
+  },
 }
