@@ -5,4 +5,8 @@ return {
     event = 'VeryLazy',
     opts = {},
   },
+  {
+    'esmuellert/nvim-eslint',
+    opts = {},
+  },
 }
