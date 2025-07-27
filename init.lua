@@ -717,7 +717,16 @@ require('lazy').setup({
         jsonls = {},
         svelte = {},
         tailwindcss = {},
-        angularls = {},
+        angularls = {
+          -- Taken from https://github.com/bohdancho/neovimrc/blob/5a09703e94c16f3bba589cf1b5f36eaf11cb6dd4/init.lua#L576
+          on_attach = function()
+            -- both vtsls and angularls have renameProvider so disable it for vtsls
+            local vtsls_client = vim.lsp.get_clients({ name = 'vtsls' })[1]
+            if vtsls_client ~= nil then
+              vtsls_client.server_capabilities.renameProvider = false
+            end
+          end,
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         vtsls = {
