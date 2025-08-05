@@ -27,4 +27,8 @@ return {
       require('nvim-highlight-colors').setup {}
     end,
   },
+  {
+    'mvllow/modes.nvim',
+    opts = {},
+  },
 }
