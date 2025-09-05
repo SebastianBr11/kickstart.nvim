@@ -1,6 +1,7 @@
 return {
   {
     'andrewferrier/debugprint.nvim',
+    opts = {},
     dependencies = {
       'nvim-telescope/telescope.nvim', -- Optional: If you want to use the `:Debugprint search` command with telescope.nvim
     },
