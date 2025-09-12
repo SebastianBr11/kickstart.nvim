@@ -1,22 +1,13 @@
 return {
   {
-    'kevinhwang91/nvim-ufo',
-    event = 'BufRead',
-    dependencies = 'kevinhwang91/promise-async',
-    config = function()
-      vim.o.foldcolumn = '1' -- '0' is not bad
-      vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-      vim.o.foldlevelstart = 99
-      vim.o.foldenable = true
+    'chrisgrieser/nvim-origami',
+    event = 'VeryLazy',
+    opts = {},
 
-      vim.keymap.set('n', 'zR', require('ufo').openAllFolds)
-      vim.keymap.set('n', 'zM', require('ufo').closeAllFolds)
-
-      require('ufo').setup {
-        close_fold_kinds_for_ft = {
-          default = { 'imports', 'comment' },
-        },
-      }
+    -- recommended: disable vim's auto-folding
+    init = function()
+      vim.opt.foldlevel = 99
+      vim.opt.foldlevelstart = 99
     end,
   },
 }
