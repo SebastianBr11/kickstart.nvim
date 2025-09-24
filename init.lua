@@ -709,6 +709,7 @@ require('lazy').setup({
         },
         astro = {},
         bashls = {},
+        fish_lsp = {},
         -- denols = {
         --   root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
         -- },
