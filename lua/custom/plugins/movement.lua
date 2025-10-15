@@ -9,6 +9,9 @@ return {
           jump_labels = true,
         },
       },
+      jump = {
+        autojump = true,
+      },
     },
   -- stylua: ignore
   keys = {
