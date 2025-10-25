@@ -167,9 +167,6 @@ vim.o.confirm = false
 -- Custom Options
 require 'options'
 
--- Disable line wrapping
-vim.o.wrap = false
-
 -- Highlight max chars per line
 -- vim.o.colorcolumn = '120'
 
