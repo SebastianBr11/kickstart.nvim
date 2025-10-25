@@ -6,3 +6,5 @@ vim.g.markdown_fenced_languages = {
 }
 
 vim.o.tabclose = 'uselast'
+
+vim.o.shell = 'fish'
