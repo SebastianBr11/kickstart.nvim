@@ -792,12 +792,6 @@ require('lazy').setup({
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
           --
           vtsls = {
-            experimental = {
-              completion = {
-                enableServerSideFuzzyMatch = true,
-                entriesLimit = 50,
-              },
-            },
             filetypes = {
               'javascript',
               'javascriptreact',
@@ -807,13 +801,30 @@ require('lazy').setup({
               'typescript.tsx',
               'vue',
             },
-            tsserver = {
-              globalPlugins = {
-                vue_plugin = {
-                  name = '@vue/typescript-plugin',
-                  location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
-                  languages = { 'vue' },
-                  configNamespace = 'typescript',
+            on_attach = function(client, bufnr)
+              if vim.bo[bufnr].filetype == 'vue' then
+                client.server_capabilities.semanticTokensProvider = nil
+              end
+            end,
+            settings = {
+              vtsls = {
+                autoUseWorkspaceTsdk = true,
+                experimental = {
+                  completion = {
+                    enableServerSideFuzzyMatch = true,
+                    entriesLimit = 50,
+                  },
+                },
+                tsserver = {
+                  globalPlugins = {
+                    {
+                      name = '@vue/typescript-plugin',
+                      location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                      languages = { 'vue' },
+                      configNamespace = 'typescript',
+                      enableForWorkspaceTypescriptVersions = true,
+                    },
+                  },
                 },
               },
             },
