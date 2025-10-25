@@ -724,8 +724,8 @@ require('lazy').setup({
         --  Feel free to add/remove any LSPs here that you want to install via Mason. They will automatically be installed and setup.
         mason = {
           angularls = {
-            -- Taken from https://github.com/bohdancho/neovimrc/blob/5a09703e94c16f3bba589cf1b5f36eaf11cb6dd4/init.lua#L576
             on_attach = function()
+              -- Taken from https://github.com/bohdancho/neovimrc/blob/5a09703e94c16f3bba589cf1b5f36eaf11cb6dd4/init.lua#L576
               -- both vtsls and angularls have renameProvider so disable it for vtsls
               local vtsls_client = vim.lsp.get_clients({ name = 'vtsls' })[1]
               if vtsls_client ~= nil then
@@ -791,7 +791,27 @@ require('lazy').setup({
                 entriesLimit = 50,
               },
             },
+            filetypes = {
+              'javascript',
+              'javascriptreact',
+              'javascript.jsx',
+              'typescript',
+              'typescriptreact',
+              'typescript.tsx',
+              'vue',
+            },
+            tsserver = {
+              globalPlugins = {
+                vue_plugin = {
+                  name = '@vue/typescript-plugin',
+                  location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
+                  languages = { 'vue' },
+                  configNamespace = 'typescript',
+                },
+              },
+            },
           },
+          vue_ls = {},
         },
         -- This table contains config for all language servers that are *not* installed via Mason.
         -- Structure is identical to the mason table from above.
