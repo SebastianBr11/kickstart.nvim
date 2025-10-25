@@ -723,8 +723,17 @@ require('lazy').setup({
         --
         --  Feel free to add/remove any LSPs here that you want to install via Mason. They will automatically be installed and setup.
         mason = {
-          clangd = {},
-          -- gopls = {},
+          angularls = {
+            -- Taken from https://github.com/bohdancho/neovimrc/blob/5a09703e94c16f3bba589cf1b5f36eaf11cb6dd4/init.lua#L576
+            on_attach = function()
+              -- both vtsls and angularls have renameProvider so disable it for vtsls
+              local vtsls_client = vim.lsp.get_clients({ name = 'vtsls' })[1]
+              if vtsls_client ~= nil then
+                vtsls_client.server_capabilities.renameProvider = false
+              end
+            end,
+          },
+          astro = {},
           basedpyright = {
             settings = {
               basedpyright = {
@@ -737,6 +746,17 @@ require('lazy').setup({
               },
             },
           },
+          bashls = {},
+          clangd = {},
+          cssls = {},
+          -- denols = {
+          --   root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
+          -- },
+          fish_lsp = {},
+          -- gopls = {},
+          html = {},
+          jsonls = {},
+          marksman = {},
           ruff = {},
           rust_analyzer = {
             settings = {
@@ -747,39 +767,8 @@ require('lazy').setup({
               },
             },
           },
-          astro = {},
-          bashls = {},
-          fish_lsp = {},
-          -- denols = {
-          --   root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
-          -- },
-          html = {},
-          cssls = {},
-          jsonls = {},
           svelte = {},
           tailwindcss = {},
-          angularls = {
-            -- Taken from https://github.com/bohdancho/neovimrc/blob/5a09703e94c16f3bba589cf1b5f36eaf11cb6dd4/init.lua#L576
-            on_attach = function()
-              -- both vtsls and angularls have renameProvider so disable it for vtsls
-              local vtsls_client = vim.lsp.get_clients({ name = 'vtsls' })[1]
-              if vtsls_client ~= nil then
-                vtsls_client.server_capabilities.renameProvider = false
-              end
-            end,
-          },
-          -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-          --
-          vtsls = {
-            experimental = {
-              completion = {
-                enableServerSideFuzzyMatch = true,
-                entriesLimit = 50,
-              },
-            },
-          },
-          marksman = {},
-
           tinymist = {
             settings = {
               formatterMode = 'typstyle',
@@ -790,6 +779,16 @@ require('lazy').setup({
               lint = {
                 enabled = true,
                 when = 'onType',
+              },
+            },
+          },
+          -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
+          --
+          vtsls = {
+            experimental = {
+              completion = {
+                enableServerSideFuzzyMatch = true,
+                entriesLimit = 50,
               },
             },
           },
