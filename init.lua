@@ -755,7 +755,14 @@ require('lazy').setup({
           fish_lsp = {},
           -- gopls = {},
           html = {},
-          jsonls = {},
+          jsonls = {
+            settings = {
+              json = {
+                schemas = require('schemastore').json.schemas(),
+                validate = { enable = true },
+              },
+            },
+          },
           marksman = {},
           ruff = {},
           rust_analyzer = {
