@@ -748,6 +748,7 @@ require('lazy').setup({
             },
           },
           bashls = {},
+          biome = {},
           clangd = {},
           cssls = {},
           -- denols = {
