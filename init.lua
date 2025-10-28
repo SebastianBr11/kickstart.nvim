@@ -805,7 +805,7 @@ require('lazy').setup({
             },
             on_attach = function(client, bufnr)
               if vim.bo[bufnr].filetype == 'vue' then
-                client.server_capabilities.semanticTokensProvider = nil
+                client.server_capabilities.semanticTokensProvider.full = false
               end
             end,
             settings = {
