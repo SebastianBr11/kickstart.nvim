@@ -748,6 +748,7 @@ require('lazy').setup({
             },
           },
           bashls = {},
+          -- Use biome lsp as linter and conform to format using it
           biome = {},
           clangd = {},
           cssls = {},
@@ -927,23 +928,38 @@ require('lazy').setup({
           }
         end
       end,
+      formatters = {
+        -- Only run biome if the project has its config files
+        biome = {
+          require_cwd = true,
+        },
+      },
       formatters_by_ft = {
-        lua = { 'stylua' },
-        sh = { 'shfmt' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'prettierd' },
-        typescript = { 'prettierd' },
-        javascriptreact = { 'prettierd' },
-        typescriptreact = { 'prettierd' },
-        html = { 'prettierd' },
-        htmlangular = { 'prettierd' },
-        css = { 'prettierd' },
-        scss = { 'prettierd' },
-        json = { 'prettierd' },
-        svelte = { 'prettierd' },
+
+        -- Webdev
+        astro = { 'biome-check', 'prettierd' },
+        css = { 'biome-check', 'prettierd' },
+        scss = { 'biome-check', 'prettierd' },
+        graphql = { 'biome-check', 'prettierd' },
+        html = { 'biome-check', 'prettierd' },
+        htmlangular = { 'biome-check', 'prettierd' },
+        javascript = { 'biome-check', 'prettierd' },
+        javascriptreact = { 'biome-check', 'prettierd' },
+        svelte = { 'biome-check', 'prettierd' },
+        typescript = { 'biome-check', 'prettierd' },
+        ['typescript.tsx'] = { 'biome-check', 'prettierd' },
+        typescriptreact = { 'biome-check', 'prettierd' },
+        vue = { 'biome-check', 'prettierd' },
+
+        -- Other
+        json = { 'biome-check', 'prettierd' },
+        jsonc = { 'biome-check', 'prettierd' },
+        lua = { 'stylua' },
+        sh = { 'shfmt' },
         tex = { 'tex-fmt' },
       },
     },
