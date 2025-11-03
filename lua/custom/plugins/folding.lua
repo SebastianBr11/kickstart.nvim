@@ -2,7 +2,12 @@ return {
   {
     'chrisgrieser/nvim-origami',
     event = 'VeryLazy',
-    opts = {},
+    opts = {
+      autoFold = {
+        enabled = false,
+        kinds = { 'imports', 'comment' }, ---@type lsp.FoldingRangeKind[]
+      },
+    },
 
     -- recommended: disable vim's auto-folding
     init = function()
