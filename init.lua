@@ -491,6 +491,7 @@ require('lazy').setup({
         function() Snacks.picker.lines {} end,
         desc = '[/] Fuzzily search in current buffer',
       },
+      { '<leader>sb', function() Snacks.picker.lines() end, desc = '[S]earch [B]uffer Lines' },
       {
         '<leader>s/',
         function() Snacks.picker.grep_buffers() end,
@@ -502,6 +503,7 @@ require('lazy').setup({
         function() Snacks.picker.files { cwd = vim.fn.stdpath 'config' } end,
         desc = '[S]earch [N]eovim files',
       },
+      { '<leader>gl', function() Snacks.picker.git_log { confirm = 'git_show' } end, desc = 'Git Log' },
     },
   },
 
