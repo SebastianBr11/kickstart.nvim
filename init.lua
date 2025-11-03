@@ -730,6 +730,7 @@ require('lazy').setup({
               local vtsls_client = vim.lsp.get_clients({ name = 'vtsls' })[1]
               if vtsls_client ~= nil then
                 angular_client.server_capabilities.renameProvider = false
+                angular_client.server_capabilities.foldingRangeProvider = false
                 vtsls_client.server_capabilities.referencesProvider = false
               end
             end,
