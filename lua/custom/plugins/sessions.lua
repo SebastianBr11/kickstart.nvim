@@ -8,13 +8,12 @@ return {
       { '<leader>ws', '<cmd>AutoSession save<CR>', desc = '[S]ave session' },
       { '<leader>wa', '<cmd>AutoSession toggle<CR>', desc = 'Toggle autosave' },
     },
-    config = function()
-      require('auto-session').setup {
-        suppressed_dirs = { '~/', '~/Dev', '~/Downloads', '/' },
-        -- log_level = 'debug',
-      }
-
-      vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
-    end,
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      suppressed_dirs = { '~/', '~/Dev', '~/Downloads', '/' },
+      git_use_branch_name = true,
+    },
+    init = function() vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions' end,
   },
 }
