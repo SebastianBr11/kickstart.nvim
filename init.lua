@@ -930,7 +930,7 @@ require('lazy').setup({
       end,
       formatters = {
         -- Only run biome if the project has its config files
-        biome = {
+        ['biome-check'] = {
           require_cwd = true,
         },
       },
