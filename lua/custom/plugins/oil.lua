@@ -21,6 +21,16 @@ return {
 
       -- Open parent directory in current window
       vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+
+      -- LSP-integrated file renaming using snacks.rename
+      vim.api.nvim_create_autocmd('User', {
+        pattern = 'OilActionsPost',
+        callback = function(event)
+          if event.data.actions[1].type == 'move' then
+            Snacks.rename.on_rename_file(event.data.actions[1].src_url, event.data.actions[1].dest_url)
+          end
+        end,
+      })
     end,
   },
 }
