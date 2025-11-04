@@ -431,6 +431,8 @@ require('lazy').setup({
     ---@type snacks.Config
     opts = {
       picker = {},
+      gitbrowse = {},
+      words = {},
     },
 
     -- See `:help snacks-pickers-sources`
@@ -504,6 +506,7 @@ require('lazy').setup({
         desc = '[S]earch [N]eovim files',
       },
       { '<leader>gl', function() Snacks.picker.git_log { confirm = 'git_show' } end, desc = 'Git Log' },
+      { '<leader>gb', function() Snacks.gitbrowse.open() end, desc = '[G]it [B]rowse' },
     },
   },
 
