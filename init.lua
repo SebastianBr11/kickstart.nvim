@@ -507,6 +507,9 @@ require('lazy').setup({
       },
       { '<leader>gl', function() Snacks.picker.git_log { confirm = 'git_show' } end, desc = 'Git Log' },
       { '<leader>gb', function() Snacks.gitbrowse.open() end, desc = '[G]it [B]rowse' },
+      { '<leader>gc', function() Snacks.picker.git_branches() end, desc = '[G]it [C]heckout' },
+      { '<leader>gd', function() Snacks.picker.git_diff() end, desc = '[G]it [D]iff' },
+      { '<leader>gg', function() Snacks.picker.git_grep() end, desc = '[G]it [G]rep' },
     },
   },
 
