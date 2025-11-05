@@ -17,11 +17,11 @@ return {
         local ft_icon, ft_color = require('nvim-web-devicons').get_icon_color(filename)
         local modified = vim.bo[props.buf].modified
         return {
-          ft_icon and { ' ', ft_icon, ' ', guifg = ft_color, guibg = '#0C0E14' } or '',
+          ft_icon and { ' ', ft_icon, ' ', guifg = ft_color, guibg = '#1a1b26' } or '',
           ' ',
           { filename, gui = modified and 'bold,italic' or 'bold' },
           ' ',
-          guibg = '#0C0E14',
+          guibg = '#1a1b26',
         }
       end,
     },
