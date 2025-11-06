@@ -817,6 +817,7 @@ require('lazy').setup({
             end,
             settings = {
               vtsls = {
+                autoUseWorkspaceTsdk = true,
                 experimental = {
                   completion = {
                     enableServerSideFuzzyMatch = true,
@@ -830,6 +831,7 @@ require('lazy').setup({
                       location = vim.fn.stdpath 'data' .. '/mason/packages/vue-language-server/node_modules/@vue/language-server',
                       languages = { 'vue' },
                       configNamespace = 'typescript',
+                      enableForWorkspaceTypeScriptVersions = true,
                     },
                   },
                 },
