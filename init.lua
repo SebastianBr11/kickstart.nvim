@@ -820,6 +820,10 @@ require('lazy').setup({
             end,
             settings = {
               typescript = {
+                updateImportsOnFileMove = { enabled = 'always' },
+                suggest = {
+                  completeFunctionCalls = true,
+                },
                 inlayHints = {
                   parameterNames = { enabled = 'all' },
                   parameterTypes = { enabled = true },
@@ -831,6 +835,7 @@ require('lazy').setup({
               },
               vtsls = {
                 autoUseWorkspaceTsdk = true,
+                enableMoveToFileCodeAction = true,
                 experimental = {
                   completion = {
                     enableServerSideFuzzyMatch = true,
