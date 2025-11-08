@@ -430,14 +430,16 @@ require('lazy').setup({
     -- See `:help snacks-picker` and `:help snacks-picker-setup`
     ---@type snacks.Config
     opts = {
-      picker = {},
+      bigfile = {},
       gitbrowse = {},
+      image = {},
       ---@class snacks.indent.Config
       indent = {
         chunk = {
           enabled = true,
         },
       },
+      picker = {},
     },
 
     -- See `:help snacks-pickers-sources`
