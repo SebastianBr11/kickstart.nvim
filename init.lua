@@ -863,7 +863,19 @@ require('lazy').setup({
               },
             },
           },
-          vue_ls = {},
+          vue_ls = {
+            settings = {
+              vue = {
+                inlayHints = {
+                  destructuredProps = true,
+                  missingProps = true,
+                  inlineHandlerLeading = true,
+                  optionsWrapper = true,
+                  vBindShorthand = true,
+                },
+              },
+            },
+          },
           yamlls = {
             settings = {
               yaml = {
