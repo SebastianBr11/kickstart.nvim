@@ -768,6 +768,8 @@ require('lazy').setup({
           biome = {},
           clangd = {},
           cssls = {},
+          dockerls = {},
+          docker_compose_language_service = {},
           -- denols = {
           --   root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
           -- },
