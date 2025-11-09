@@ -767,7 +767,15 @@ require('lazy').setup({
           -- Use biome lsp as linter and conform to format using it
           biome = {},
           clangd = {},
-          cssls = {},
+          cssls = {
+            settings = {
+              css = {
+                lint = {
+                  unknownAtRules = 'ignore',
+                },
+              },
+            },
+          },
           dockerls = {},
           docker_compose_language_service = {},
           -- denols = {
