@@ -858,6 +858,13 @@ require('lazy').setup({
                       configNamespace = 'typescript',
                       enableForWorkspaceTypeScriptVersions = true,
                     },
+                    {
+                      name = '@angular/language-server',
+                      location = vim.fn.stdpath 'data' .. '/mason/packages/angular-language-server/node_modules/@angular/language-server',
+                      -- Don't use typescript workspace version as recommended by Angular
+                      -- See https://github.com/angular/vscode-ng-language-service?tab=readme-ov-file#versioning
+                      enableForWorkspaceTypeScriptVersions = false,
+                    },
                   },
                 },
               },
