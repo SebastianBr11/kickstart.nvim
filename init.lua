@@ -767,6 +767,7 @@ require('lazy').setup({
           -- Use biome lsp as linter and conform to format using it
           biome = {},
           clangd = {},
+          css_variables = {},
           cssls = {
             settings = {
               css = {
