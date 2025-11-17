@@ -4,5 +4,7 @@ return {
     { '<leader>ot', '<cmd>OverseerToggle<CR>', desc = '[O]verseer [T]oggle' },
     { '<leader>or', '<cmd>OverseerRun<CR>', desc = '[O]verseer [R]un' },
   },
-  opts = {},
+  opts = {
+    task_list = { direction = 'right' },
+  },
 }
