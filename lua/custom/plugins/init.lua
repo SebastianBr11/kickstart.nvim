@@ -34,4 +34,8 @@ return {
     'mvllow/modes.nvim',
     opts = {},
   },
+  {
+    'qwavies/smart-backspace.nvim',
+    event = { 'InsertEnter', 'CmdlineEnter' },
+  },
 }
