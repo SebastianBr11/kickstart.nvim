@@ -2,20 +2,11 @@
 ---@type LazySpec
 return {
   {
-    'oribarilan/lensline.nvim',
-    branch = 'release/2.x', -- or: branch = 'release/2.x' for latest non-breaking updates
-    event = 'LspAttach',
+    'romus204/referencer.nvim',
     opts = {
-      profiles = {
-        {
-          name = 'minimal',
-          style = {
-            placement = 'inline',
-            prefix = '',
-            render = 'focused',
-          },
-        },
-      },
+      enable = true,
+      kinds = { 5, 6, 7, 8, 12, 14, 23 },
+      hl_group = 'LspCodeLens',
     },
   },
 }
