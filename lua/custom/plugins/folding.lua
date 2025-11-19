@@ -4,8 +4,8 @@ return {
     event = 'VeryLazy',
     opts = {
       autoFold = {
-        enabled = false,
-        kinds = { 'imports', 'comment' }, ---@type lsp.FoldingRangeKind[]
+        enabled = true,
+        kinds = { 'imports' }, ---@type lsp.FoldingRangeKind[]
       },
     },
 
