@@ -848,10 +848,10 @@ require('lazy').setup({
                   completeFunctionCalls = true,
                 },
                 inlayHints = {
-                  parameterNames = { enabled = 'all' },
+                  parameterNames = { enabled = 'literals' },
                   parameterTypes = { enabled = true },
                   variableTypes = { enabled = true },
-                  propertyDeclarationTypes = { enabled = true },
+                  propertyDeclarationTypes = { enabled = false },
                   functionLikeReturnTypes = { enabled = true },
                   enumMemberValues = { enabled = true },
                 },
