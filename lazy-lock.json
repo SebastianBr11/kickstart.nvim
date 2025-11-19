@@ -46,6 +46,7 @@
   "smart-backspace.nvim": { "branch": "main", "commit": "86d4b09b18933c96454f36c5a0b8afdb5cabf7ed" },
   "smear-cursor.nvim": { "branch": "main", "commit": "ed64b7decb25e3db11befa0b76adc9073a3688b5" },
   "snacks.nvim": { "branch": "main", "commit": "836e07336ba523d4da480cd66f0241815393e98e" },
+  "store.nvim": { "branch": "main", "commit": "df430716b095719f7221f2fb50be696879ca7c34" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
   "tokyonight.nvim": { "branch": "main", "commit": "5da1b76e64daf4c5d410f06bcb6b9cb640da7dfd" },
   "transparent.nvim": { "branch": "main", "commit": "8ac59883de84e9cd1850ea25cf087031c5ba7d54" },
