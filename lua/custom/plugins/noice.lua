@@ -10,6 +10,11 @@ return {
               enabled = false,
             },
           },
+          hover = {
+            -- Disable "no information available" popup which is really annoying
+            -- when using multiple servers
+            silent = true,
+          },
           -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
           override = {
             ['vim.lsp.util.convert_input_to_markdown_lines'] = true,
