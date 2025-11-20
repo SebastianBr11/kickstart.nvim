@@ -1035,6 +1035,7 @@ require('lazy').setup({
         vue = { 'biome-check', 'prettierd', stop_after_first = true },
 
         -- Other
+        markdown = { 'prettierd' },
         json = { 'biome-check', 'prettierd', stop_after_first = true },
         jsonc = { 'biome-check', 'prettierd', stop_after_first = true },
         lua = { 'stylua' },
