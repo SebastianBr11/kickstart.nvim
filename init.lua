@@ -864,6 +864,7 @@ require('lazy').setup({
                     enableServerSideFuzzyMatch = true,
                     entriesLimit = 50,
                   },
+                  maxInlayHintLength = 30,
                 },
                 tsserver = {
                   globalPlugins = {
