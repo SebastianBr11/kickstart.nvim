@@ -11,3 +11,7 @@ vim.o.shell = 'fish'
 
 vim.o.linebreak = true
 vim.o.breakindent = true
+
+vim.opt.spelllang = { 'en' }
+vim.opt.spell = true
+vim.opt.spelloptions = { 'camel' }

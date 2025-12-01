@@ -522,6 +522,8 @@ require('lazy').setup({
       { '<leader>gc', function() Snacks.picker.git_branches() end, desc = '[G]it [C]heckout' },
       { '<leader>gd', function() Snacks.picker.git_diff() end, desc = '[G]it [D]iff' },
       { '<leader>gg', function() Snacks.picker.git_grep() end, desc = '[G]it [G]rep' },
+
+      { 'z=', function() Snacks.picker.spelling() end, desc = 'Spelling suggestions' },
     },
   },
 
