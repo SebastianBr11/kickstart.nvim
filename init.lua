@@ -688,14 +688,6 @@ require('lazy').setup({
             -- Enable inlay hints by default
             vim.lsp.inlay_hint.enable()
           end
-
-          if client and client:supports_method('textDocument/codeLens', event.buf) then
-            vim.lsp.codelens.refresh()
-            vim.api.nvim_create_autocmd({ 'BufEnter', 'CursorHold', 'InsertLeave' }, {
-              buffer = event.bufnr,
-              callback = vim.lsp.codelens.refresh,
-            })
-          end
         end,
       })
 
@@ -866,10 +858,6 @@ require('lazy').setup({
                   propertyDeclarationTypes = { enabled = false },
                   functionLikeReturnTypes = { enabled = true },
                   enumMemberValues = { enabled = true },
-                },
-                referencesCodeLens = {
-                  enabled = true,
-                  showOnAllFunctions = true,
                 },
               },
               vtsls = {
