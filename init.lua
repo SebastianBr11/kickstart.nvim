@@ -1098,6 +1098,10 @@ require('lazy').setup({
         opts = {},
       },
       'folke/lazydev.nvim',
+      {
+        'mikavilpas/blink-ripgrep.nvim',
+        version = '*', -- use the latest stable version
+      },
     },
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
@@ -1182,7 +1186,7 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer', 'ripgrep' },
         per_filetype = {
           sql = { 'snippets', 'dadbod', 'buffer' },
         },
@@ -1200,6 +1204,18 @@ require('lazy').setup({
               local filetype = vim.bo.filetype
               return vim.tbl_contains(enabled_filetypes, filetype)
             end,
+          },
+          ripgrep = {
+            module = 'blink-ripgrep',
+            name = 'Ripgrep',
+            -- see the full configuration below for all available options
+            ---@module "blink-ripgrep"
+            ---@type blink-ripgrep.Options
+            opts = {
+              backend = {
+                use = 'gitgrep-or-ripgrep',
+              },
+            },
           },
           dadbod = { name = 'Dadbod', module = 'vim_dadbod_completion.blink' },
           -- On WSL2, blink.cmp may cause the editor to freeze due to a known limitation.
