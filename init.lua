@@ -809,6 +809,7 @@ require('lazy').setup({
             },
           },
           marksman = {},
+          postgres_lsp = {},
           ruff = {},
           rust_analyzer = {
             settings = {
@@ -819,6 +820,7 @@ require('lazy').setup({
               },
             },
           },
+          sqlls = {},
           svelte = {},
           tailwindcss = {},
           tinymist = {
@@ -966,6 +968,7 @@ require('lazy').setup({
         'prettierd',
         'shellcheck',
         'shfmt',
+        'sql-formatter',
         'stylua', -- Used to format Lua code
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -1055,6 +1058,7 @@ require('lazy').setup({
         jsonc = { 'biome-check', 'prettierd', stop_after_first = true },
         lua = { 'stylua' },
         sh = { 'shfmt' },
+        sql = { 'sql_formatter' },
         tex = { 'tex-fmt' },
       },
     },
