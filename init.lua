@@ -1179,6 +1179,9 @@ require('lazy').setup({
 
       sources = {
         default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
+        per_filetype = {
+          sql = { 'snippets', 'dadbod', 'buffer' },
+        },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
           buffer = {
@@ -1194,6 +1197,7 @@ require('lazy').setup({
               return vim.tbl_contains(enabled_filetypes, filetype)
             end,
           },
+          dadbod = { name = 'Dadbod', module = 'vim_dadbod_completion.blink' },
           -- On WSL2, blink.cmp may cause the editor to freeze due to a known limitation.
           -- To address this issue, uncomment the following configuration:
           -- cmdline = {
