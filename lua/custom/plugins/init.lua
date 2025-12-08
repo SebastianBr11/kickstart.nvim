@@ -7,9 +7,6 @@
 ---@type LazySpec
 return {
   {
-    'xiyaowong/transparent.nvim',
-  },
-  {
     'sphamba/smear-cursor.nvim',
     -- Options for faster smear from the Github Page (https://github.com/sphamba/smear-cursor.nvim)
     opts = { -- Default  Range
