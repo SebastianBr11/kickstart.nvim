@@ -844,6 +844,12 @@ require('lazy').setup({
               if vim.bo[bufnr].filetype == 'vue' then
                 client.server_capabilities.semanticTokensProvider.full = false
               end
+
+              vim.api.nvim_create_user_command(
+                'TypescriptLog',
+                function() client:exec_cmd { command = 'typescript.openTsServerLog', title = 'Open TS Server Log' } end,
+                {}
+              )
             end,
             settings = {
               typescript = {
