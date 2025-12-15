@@ -1125,6 +1125,7 @@ require('lazy').setup({
         preset = 'default',
         ['<C-l>'] = { 'snippet_forward', 'fallback' },
         ['<C-h>'] = { 'snippet_backward', 'fallback' },
+        ['<C-f>'] = { 'select_and_accept', 'fallback' },
         ['<Tab>'] = false,
         ['<S-Tab>'] = false,
 
