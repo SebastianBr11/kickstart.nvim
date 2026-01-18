@@ -45,4 +45,5 @@ return {
       vim.keymap.set('i', '<A-e>', function() neocodeium.cycle_or_complete(1) end)
     end,
   },
+  { 'serhez/bento.nvim', opts = {} },
 }
