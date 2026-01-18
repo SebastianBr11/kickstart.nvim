@@ -790,7 +790,42 @@ require('lazy').setup({
           --   root_dir = require('lspconfig').util.root_pattern('deno.json', 'deno.jsonc'),
           -- },
           fish_lsp = {},
-          -- gopls = {},
+          gopls = {
+            settings = {
+              gopls = {
+                gofumpt = true,
+                codelenses = {
+                  gc_details = false,
+                  generate = true,
+                  regenerate_cgo = true,
+                  run_govulncheck = true,
+                  test = true,
+                  tidy = true,
+                  upgrade_dependency = true,
+                  vendor = true,
+                },
+                hints = {
+                  assignVariableTypes = true,
+                  compositeLiteralFields = true,
+                  compositeLiteralTypes = true,
+                  constantValues = true,
+                  functionTypeParameters = true,
+                  parameterNames = true,
+                  rangeVariableTypes = true,
+                },
+                analyses = {
+                  nilness = true,
+                  unusedparams = true,
+                  unusedwrite = true,
+                  useany = true,
+                },
+                usePlaceholders = true,
+                staticcheck = true,
+                directoryFilters = { '-.git', '-.vscode', '-.idea', '-.vscode-test', '-node_modules' },
+                semanticTokens = true,
+              },
+            },
+          },
           html = {},
           jsonls = {
             settings = {
@@ -957,6 +992,9 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers.mason or {})
       vim.list_extend(ensure_installed, {
+        'goimports',
+        'golangci-lint',
+        'golines',
         'hadolint',
         'markdownlint',
         'prettierd',
@@ -1035,6 +1073,7 @@ require('lazy').setup({
         astro = { 'biome-check', 'prettierd', stop_after_first = true },
         css = { 'biome-check', 'prettierd', stop_after_first = true },
         scss = { 'biome-check', 'prettierd', stop_after_first = true },
+        go = { 'goimports', 'golines', 'gofmt' },
         graphql = { 'biome-check', 'prettierd', stop_after_first = true },
         html = { 'biome-check', 'prettierd', stop_after_first = true },
         htmlangular = { 'biome-check', 'prettierd', stop_after_first = true },
