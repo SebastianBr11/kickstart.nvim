@@ -22,4 +22,11 @@ return {
     dependencies = { 'MunifTanjim/nui.nvim' },
     cmd = 'CodeDiff',
   },
+  {
+    'lionyxml/gitlineage.nvim',
+    opts = {
+      split = 'vertical',
+      keymap = '<leader>gh',
+    },
+  },
 }
