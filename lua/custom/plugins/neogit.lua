@@ -1,9 +1,10 @@
 return {
   {
     'NeogitOrg/neogit',
+    lazy = true,
     dependencies = {
       'nvim-lua/plenary.nvim', -- required
-      -- 'sindrets/diffview.nvim', -- optional - Diff integration
+      'esmuellert/codediff.nvim',
 
       -- Only one of these is needed.
       -- 'nvim-telescope/telescope.nvim', -- optional
@@ -11,11 +12,14 @@ return {
       -- 'echasnovski/mini.pick', -- optional
       'folke/snacks.nvim', -- optional
     },
-    config = function()
-      require('neogit').setup {}
-
-      -- Keymap for opening Neogit
-      vim.keymap.set('n', '<leader>gs', '<CMD>Neogit<CR>', { desc = 'Neo[G]it [S]etup' })
-    end,
+    cmd = 'Neogit',
+    keys = {
+      { '<leader>gs', '<cmd>Neogit<cr>', desc = 'Neo[G]it [S]how' },
+    },
+  },
+  {
+    'esmuellert/codediff.nvim',
+    dependencies = { 'MunifTanjim/nui.nvim' },
+    cmd = 'CodeDiff',
   },
 }
