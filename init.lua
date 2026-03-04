@@ -445,6 +445,7 @@ require('lazy').setup({
         },
       },
       picker = {},
+      scratch = {},
     },
 
     -- See `:help snacks-pickers-sources`
@@ -524,6 +525,9 @@ require('lazy').setup({
       { '<leader>gg', function() Snacks.picker.git_grep() end, desc = '[G]it [G]rep' },
 
       { 'z=', function() Snacks.picker.spelling() end, desc = 'Spelling suggestions' },
+
+      { '<leader>.', function() Snacks.scratch() end, desc = 'Toggle Scratch Buffer' },
+      { '<leader>S', function() Snacks.scratch.select() end, desc = 'Select Scratch Buffer' },
     },
   },
 
