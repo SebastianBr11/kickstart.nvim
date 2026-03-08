@@ -1298,10 +1298,8 @@ require('lazy').setup({
       require('nvim-treesitter').install(filetypes)
 
       vim.api.nvim_create_autocmd('FileType', {
-        pattern = filetypes,
         callback = function(args)
-          local buf = args.buf
-          local filetype = args.match
+          local buf, filetype = args.buf, args.match
 
           -- you need some mechanism to avoid running on buffers that do not
           -- correspond to a language (like oil.nvim buffers), this implementation
