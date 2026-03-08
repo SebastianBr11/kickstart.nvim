@@ -475,6 +475,8 @@ require('lazy').setup({
 
       { '<leader>.', function() Snacks.scratch() end, desc = 'Toggle Scratch Buffer' },
       { '<leader>S', function() Snacks.scratch.select() end, desc = 'Select Scratch Buffer' },
+
+      { '<leader>sc', function() Snacks.picker.commands() end, desc = '[S]earch [C]ommands' },
     },
   },
 
