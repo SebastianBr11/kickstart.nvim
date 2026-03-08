@@ -867,6 +867,7 @@ require('lazy').setup({
               },
             },
           },
+          tombi = {},
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
           --
           vtsls = {
