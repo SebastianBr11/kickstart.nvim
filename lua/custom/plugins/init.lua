@@ -1,13 +1,9 @@
--- You can add your own plugins here or in other files in this directory!
---  I promise not to create any merge conflicts in this directory :)
---
--- See the kickstart.nvim README for more information
-
 ---@module 'lazy'
 ---@type LazySpec
 return {
   {
     'sphamba/smear-cursor.nvim',
+    enabled = false,
     -- Options for faster smear from the Github Page (https://github.com/sphamba/smear-cursor.nvim)
     opts = { -- Default  Range
       stiffness = 0.8, -- 0.6      [0, 1]
