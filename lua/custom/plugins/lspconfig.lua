@@ -206,8 +206,12 @@ return {
               end
             end,
           },
-          astro = {},
+          astro = {
+            ---@type lspconfig.settings.astro
+            settings = {},
+          },
           basedpyright = {
+            ---@type lspconfig.settings.basedpyright
             settings = {
               basedpyright = {
                 -- Using Ruff's import organizer
@@ -219,12 +223,19 @@ return {
               },
             },
           },
-          bashls = {},
+          bashls = {
+            ---@type lspconfig.settings.bashls
+            settings = {},
+          },
           -- Use biome lsp as linter and conform to format using it
           biome = {},
-          clangd = {},
+          clangd = {
+            ---@type lspconfig.settings.clangd
+            settings = {},
+          },
           css_variables = {},
           cssls = {
+            ---@type lspconfig.settings.cssls
             settings = {
               css = {
                 lint = {
@@ -240,6 +251,8 @@ return {
           -- },
           fish_lsp = {},
           gopls = {
+            ---@diagnostic disable-next-line: undefined-doc-name
+            ---@type lspconfig.settings.gopls
             settings = {
               gopls = {
                 gofumpt = true,
@@ -275,8 +288,13 @@ return {
               },
             },
           },
-          html = {},
+          harper_ls = {},
+          html = {
+            ---@type lspconfig.settings.html
+            settings = {},
+          },
           jsonls = {
+            ---@type lspconfig.settings.jsonls
             settings = {
               json = {
                 schemas = require('schemastore').json.schemas(),
@@ -285,6 +303,7 @@ return {
             },
           },
           lua_ls = {
+            ---@type lspconfig.settings.lua_ls
             settings = {
               Lua = {
                 completion = {
@@ -299,6 +318,7 @@ return {
           postgres_lsp = {},
           ruff = {},
           rust_analyzer = {
+            ---@type lspconfig.settings.rust_analyzer
             settings = {
               ['rust-analyzer'] = {
                 check = {
@@ -308,9 +328,16 @@ return {
             },
           },
           sqlls = {},
-          svelte = {},
-          tailwindcss = {},
+          svelte = {
+            ---@type lspconfig.settings.svelte
+            settings = {},
+          },
+          tailwindcss = {
+            ---@type lspconfig.settings.tailwindcss
+            settings = {},
+          },
           tinymist = {
+            ---@type lspconfig.settings.tinymist
             settings = {
               formatterMode = 'typstyle',
               exportPdf = 'onType',
@@ -347,6 +374,7 @@ return {
                 {}
               )
             end,
+            ---@type lspconfig.settings.vtsls
             settings = {
               typescript = {
                 updateImportsOnFileMove = { enabled = 'always' },
@@ -404,6 +432,7 @@ return {
             },
           },
           vue_ls = {
+            ---@type lspconfig.settings.vue_ls
             settings = {
               vue = {
                 -- inlayHints = {
@@ -417,6 +446,7 @@ return {
             },
           },
           yamlls = {
+            ---@type lspconfig.settings.yamlls
             settings = {
               yaml = {
                 schemaStore = {
