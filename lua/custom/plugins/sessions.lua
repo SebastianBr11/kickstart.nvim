@@ -1,7 +1,10 @@
+---@module 'lazy'
+---@type LazySpec
 return {
   {
     'rmagatti/auto-session',
     lazy = false,
+    cond = vim.env.KITTY_SCROLLBACK_NVIM ~= 'true',
     keys = {
       -- Will use Telescope if installed or a vim.ui.select picker otherwise
       { '<leader>wr', '<cmd>AutoSession search<CR>', desc = 'Session search' },
