@@ -15,7 +15,6 @@ return {
     ---@type AutoSession.Config
     opts = {
       suppressed_dirs = { '~/', '~/Dev', '~/Downloads', '/' },
-      git_use_branch_name = true,
     },
     init = function() vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions' end,
   },
