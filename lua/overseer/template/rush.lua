@@ -48,6 +48,17 @@ return {
             }
           end,
         })
+        if v.watchOptions ~= null then
+          table.insert(ret, {
+            name = string.format('rush %s --watch', v.name),
+            builder = function()
+              return {
+                cmd = { 'rush', v.name, '--watch' },
+                cwd = cwd,
+              }
+            end,
+          })
+        end
       end
     end
 
@@ -55,7 +66,7 @@ return {
       name = 'rush' .. ' update',
       builder = function()
         return {
-          cmd = { 'rush', ' update' },
+          cmd = { 'rush', 'update' },
           cwd = cwd,
         }
       end,
