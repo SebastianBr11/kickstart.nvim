@@ -48,7 +48,7 @@ return {
             }
           end,
         })
-        if v.watchOptions ~= null then
+        if v.watchOptions ~= nil then
           table.insert(ret, {
             name = string.format('rush %s --watch', v.name),
             builder = function()
@@ -58,6 +58,24 @@ return {
               }
             end,
           })
+        end
+      end
+    end
+
+    if data.parameters then
+      for _, param in ipairs(data.parameters) do
+        if param.associatedCommands ~= nil then
+          for _, command in ipairs(param.associatedCommands) do
+            table.insert(ret, {
+              name = string.format('rush %s %s', command, param.longName),
+              builder = function()
+                return {
+                  cmd = { 'rush', command, param.longName },
+                  cwd = cwd,
+                }
+              end,
+            })
+          end
         end
       end
     end
