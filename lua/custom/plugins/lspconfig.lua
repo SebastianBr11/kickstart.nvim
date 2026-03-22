@@ -398,7 +398,6 @@ return {
                 experimental = {
                   completion = {
                     enableServerSideFuzzyMatch = true,
-                    entriesLimit = 50,
                   },
                   maxInlayHintLength = 30,
                 },
