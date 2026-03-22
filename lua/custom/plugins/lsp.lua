@@ -9,6 +9,9 @@ return {
     'esmuellert/nvim-eslint',
     ---@type vim.lsp.Config
     opts = {
+      settings = {
+        format = true,
+      },
       -- Immediately stop eslint if there's no eslint config file.
       -- Otherwise both biome and eslint attach even though a project only uses biome.
       -- Some parts were taken from nvim-lspconfig.
@@ -45,7 +48,31 @@ return {
 
         if not is_buffer_using_eslint then
           vim.lsp.stop_client(client.id)
+          return
         end
+
+        vim.api.nvim_buf_create_user_command(
+          bufnr,
+          'LspEslintFixAll',
+          function()
+            client:request_sync('workspace/executeCommand', {
+              command = 'eslint.applyAllFixes',
+              arguments = {
+                {
+                  uri = vim.uri_from_bufnr(bufnr),
+                  version = vim.lsp.util.buf_versions[bufnr],
+                },
+              },
+            }, nil, bufnr)
+          end,
+          {}
+        )
+
+        vim.api.nvim_create_autocmd('BufWritePre', {
+          buffer = bufnr,
+          callback = function() vim.cmd 'LspEslintFixAll' end,
+          desc = 'Run ESLint fix on save only if enabled',
+        })
       end,
       filetypes = {
         'javascript',
