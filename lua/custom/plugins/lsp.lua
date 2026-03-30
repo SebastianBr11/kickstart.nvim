@@ -2,7 +2,6 @@ return {
   {
     'zeioth/garbage-day.nvim',
     event = 'VeryLazy',
-    version = 'v1.3.1',
     opts = {},
   },
   {
