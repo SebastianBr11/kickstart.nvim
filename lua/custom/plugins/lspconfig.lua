@@ -1,6 +1,5 @@
 -- LSP Plugins
 return {
-
   {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
@@ -205,6 +204,14 @@ return {
                 angular_client.server_capabilities.renameProvider = false
                 angular_client.server_capabilities.foldingRangeProvider = false
                 vtsls_client.server_capabilities.referencesProvider = false
+                return
+              end
+
+              local tsgo_client = vim.lsp.get_clients({ name = 'tsgo' })[1]
+              if tsgo_client ~= nil then
+                angular_client.server_capabilities.renameProvider = false
+                angular_client.server_capabilities.foldingRangeProvider = false
+                angular_client.server_capabilities.referencesProvider = false
               end
             end,
           },
@@ -387,8 +394,7 @@ return {
             },
           },
           tombi = {},
-          -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
-          --
+          tsgo = {},
           vtsls = {
             filetypes = {
               'javascript',
@@ -543,7 +549,7 @@ return {
       -- After configuring our language servers, we now enable them
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
-        automatic_enable = true, -- automatically run vim.lsp.enable() for all servers that are installed via Mason
+        automatic_enable = { exclude = { 'tsgo' } }, -- automatically run vim.lsp.enable() for all servers that are installed via Mason
       }
 
       -- Manually run vim.lsp.enable for all language servers that are *not* installed via Mason
