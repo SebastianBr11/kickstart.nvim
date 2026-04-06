@@ -41,4 +41,14 @@ return {
       vim.keymap.set('i', '<A-e>', function() neocodeium.cycle_or_complete(1) end)
     end,
   },
+  {
+    'toku-sa-n/po.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+    },
+    init = function()
+      vim.keymap.set('n', ']p', ':Po jump next<CR>')
+      vim.keymap.set('n', '[p', ':Po jump prev<CR>')
+    end,
+  },
 }
