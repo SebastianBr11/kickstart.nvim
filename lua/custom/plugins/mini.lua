@@ -31,5 +31,7 @@ return { -- Collection of various small independent plugins/modules
 
     -- ... and there is more!
     --  Check out: https://github.com/nvim-mini/mini.nvim
+
+    require('mini.move').setup()
   end,
 }
