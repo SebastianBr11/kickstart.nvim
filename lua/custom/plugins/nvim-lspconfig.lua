@@ -323,7 +323,6 @@ return {
               },
             },
           },
-          marksman = {},
           postgres_lsp = {},
           ruff = {},
           rust_analyzer = {
