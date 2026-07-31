@@ -16,6 +16,8 @@ return {
       -- (from https://github.com/lervag/vimtex/wiki/which%E2%80%90key.nvim-support)
       vim.g.vimtex_mappings_enabled = false
 
+      vim.g.vimtex_compiler_method = 'tectonic'
+
       local augroup = vim.api.nvim_create_augroup('vimtexConfig', {})
       vim.api.nvim_create_autocmd('FileType', {
         pattern = 'tex',
