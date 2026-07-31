@@ -24,7 +24,6 @@ local excluded_filenames = {
 }
 
 local included_filenames = {
-  'typst',
   'tex',
 }
 
