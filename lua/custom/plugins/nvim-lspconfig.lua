@@ -519,6 +519,7 @@ return {
         'shfmt',
         'sql-formatter',
         'stylua', -- Used to format Lua code
+        'tex-fmt',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed, auto_update = true }
 
