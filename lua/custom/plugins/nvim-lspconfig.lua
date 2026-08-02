@@ -378,6 +378,22 @@ return {
               },
             },
           },
+          texlab = {
+            settings = {
+              texlab = {
+                build = {
+                  executable = 'tectonic',
+                  args = { '-X', 'compile', '%f', '--synctex', '--keep-logs', '--keep-intermediates' },
+                  onSave = true,
+                },
+                chktex = {
+                  onOpenAndSave = true,
+                  onEdit = true,
+                },
+                latexFormatter = 'tex-fmt',
+              },
+            },
+          },
           tombi = {},
           tsgo = {},
           vtsls = {
