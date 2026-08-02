@@ -536,6 +536,7 @@ return {
         'sql-formatter',
         'stylua', -- Used to format Lua code
         'tex-fmt',
+        'tree-sitter-cli',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed, auto_update = true }
 
