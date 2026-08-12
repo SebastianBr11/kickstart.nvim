@@ -1,10 +1,5 @@
 return {
   {
-    'zeioth/garbage-day.nvim',
-    event = 'VeryLazy',
-    opts = {},
-  },
-  {
     'esmuellert/nvim-eslint',
     ---@type vim.lsp.Config
     opts = {
