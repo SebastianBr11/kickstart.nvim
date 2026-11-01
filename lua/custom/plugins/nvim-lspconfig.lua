@@ -297,7 +297,6 @@ return {
               },
             },
           },
-          harper_ls = {},
           html = {
             ---@type lspconfig.settings.html
             settings = {},
