@@ -24,10 +24,6 @@ return {
     end,
   },
   {
-    'mvllow/modes.nvim',
-    opts = {},
-  },
-  {
     'monkoose/neocodeium',
     event = 'VeryLazy',
     config = function()
