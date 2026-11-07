@@ -28,10 +28,6 @@ return {
     opts = {},
   },
   {
-    'qwavies/smart-backspace.nvim',
-    event = { 'InsertEnter', 'CmdlineEnter' },
-  },
-  {
     'monkoose/neocodeium',
     event = 'VeryLazy',
     config = function()
