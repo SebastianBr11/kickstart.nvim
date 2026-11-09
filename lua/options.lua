@@ -15,3 +15,10 @@ vim.o.breakindent = true
 vim.opt.spelllang = { 'en' }
 vim.opt.spell = true
 vim.opt.spelloptions = { 'camel' }
+
+vim.filetype.add {
+  extension = {
+    gpr = 'adagpr',
+  },
+}
+vim.treesitter.language.register('ada', { 'adagpr' })

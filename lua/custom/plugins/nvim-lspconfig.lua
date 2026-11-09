@@ -505,7 +505,27 @@ return {
         -- This table contains config for all language servers that are *not* installed via Mason.
         -- Structure is identical to the mason table from above.
         others = {
-          -- dartls = {},
+          ada_ls = {
+            on_init = require('gpr_selector').als_on_init,
+            cmd_env = {
+              PATH = vim.fn.trim(vim.fn.system 'dirname "$(find "$HOME/.local/share/alire/toolchains" -type f -name gnatls -print -quit)"')
+                .. ':'
+                .. (vim.env.PATH or ''),
+            },
+          },
+          adagpr_ls = {
+            cmd = { 'ada_language_server', '--language-gpr' },
+            cmd_env = {
+              PATH = vim.fn.trim(vim.fn.system 'dirname "$(find "$HOME/.local/share/alire/toolchains" -type f -name gnatls -print -quit)"')
+                .. ':'
+                .. (vim.env.PATH or ''),
+            },
+            filetypes = { 'adagpr' },
+            root_dir = function(bufnr, on_dir)
+              local fname = vim.api.nvim_buf_get_name(bufnr)
+              on_dir(require('lspconfig.util').root_pattern('Makefile', '.git', 'alire.toml', '*.gpr', '*.adc')(fname))
+            end,
+          },
           mise = {},
         },
       }
@@ -525,6 +545,7 @@ return {
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers.mason or {})
       vim.list_extend(ensure_installed, {
+        'ada_language_server',
         'goimports',
         'golangci-lint',
         'golines',
