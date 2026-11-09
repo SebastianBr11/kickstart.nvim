@@ -506,7 +506,6 @@ return {
         -- Structure is identical to the mason table from above.
         others = {
           ada_ls = {
-            on_init = require('gpr_selector').als_on_init,
             cmd_env = {
               PATH = vim.fn.trim(vim.fn.system 'dirname "$(find "$HOME/.local/share/alire/toolchains" -type f -name gnatls -print -quit)"')
                 .. ':'
