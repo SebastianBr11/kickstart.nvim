@@ -506,6 +506,7 @@ return {
         -- Structure is identical to the mason table from above.
         others = {
           -- dartls = {},
+          mise = {},
         },
       }
 
