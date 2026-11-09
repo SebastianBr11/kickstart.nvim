@@ -25,6 +25,7 @@
   "modes.nvim": { "branch": "main", "commit": "ace5186e3249d6a381f1a2e55a518f11a3a6fe73" },
   "neocodeium": { "branch": "main", "commit": "ab8a3da3a66d299ad5422b76ce5ee21b68719296" },
   "neogit": { "branch": "master", "commit": "697ad3ee86a73cf6b6758b838d7a7d76cf3b9f86" },
+  "neojj": { "branch": "main", "commit": "d84589a265c44b5183887a43a456fe14550c0b56" },
   "neotest": { "branch": "master", "commit": "27bf921498043f7ecd821d6db68d05de244bbd02" },
   "neotest-vitest": { "branch": "main", "commit": "b0c265743c877058068dbc40d104ea5d40e6b257" },
   "noice.nvim": { "branch": "main", "commit": "7bfd942445fb63089b59f97ca487d605e715f155" },
