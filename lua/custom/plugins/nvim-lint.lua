@@ -9,7 +9,7 @@ return {
       lint.linters_by_ft = {
         dockerfile = { 'hadolint' },
         go = { 'golangcilint' },
-        markdown = { 'markdownlint' },
+        -- markdown = { 'markdownlint' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
